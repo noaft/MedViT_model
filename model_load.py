@@ -1,7 +1,7 @@
 import torch
 import timm
 
-def load_model(model_path, device):
+def load_model(model_path, device = 'cpu'):
     """
     Load a pre-trained MedViT model from the specified path.
 
@@ -24,3 +24,5 @@ def load_model(model_path, device):
     model.to(device)
     
     return model
+
+model = load_model('./model/best_model.pth')
