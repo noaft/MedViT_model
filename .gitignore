@@ -1,1 +1,3 @@
 *.pth
+*.Identifier
+*__pycache__

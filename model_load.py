@@ -1,5 +1,6 @@
 import torch
 import timm
+import MedViT
 
 def load_model(model_path, device = 'cpu'):
     """
@@ -15,7 +16,7 @@ def load_model(model_path, device = 'cpu'):
     model = timm.create_model('MedViT_small', num_classes = 7) 
     
     # Load the state dictionary
-    state_dict = torch.load(model_path, map_location=device)
+    state_dict = torch.load(model_path)
     
     # Load the state dictionary into the model
     model.load_state_dict(state_dict)
@@ -25,4 +26,4 @@ def load_model(model_path, device = 'cpu'):
     
     return model
 
-model = load_model('./model/best_model.pth')
+model = load_model('./model/checkpoint_best.pth')
