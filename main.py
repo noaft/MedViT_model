@@ -62,17 +62,17 @@ def image_show(folder_path, meta_name):
                 if is_correct:
                     acc += 1
 
-                plt.imshow(img)
-                plt.axis('off')  # Hide axes
-                plt.title(f"Predicted: {label}\nCorrect: {is_correct}")  # Show prediction and correctness
-                plt.pause(2)  # Display image for 2 seconds before moving to next
-                plt.clf()  # Clear the current figure
+                # plt.imshow(img)
+                # plt.axis('off')  # Hide axes
+                # plt.title(f"Predicted: {label}\nCorrect: {is_correct}")  # Show prediction and correctness
+                # plt.pause(2)  # Display image for 2 seconds before moving to next
+                # plt.clf()  # Clear the current figure
             except KeyboardInterrupt:
                 print("\nProgram interrupted by user. Exiting...")
-                plt.close()
+                # plt.close()
                 return
             except Exception as e:
-                print(f"Error processing image {image_file}: {str(e)}")
+                # print(f"Error processing image {image_file}: {str(e)}")
                 continue
         
         plt.close()  # Close the figure window after all images are displayed
